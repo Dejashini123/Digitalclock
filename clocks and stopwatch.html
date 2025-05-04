@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="stopwatch.png">
+    <title>Digital clock </title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<center>
+<h1  style ="color:white;"><i>DIGITAL CLOCK</i></h1>
+</center>
+<body bgcolor="black">
+<center>
+<div class="hero">
+    <div class="call">
+        <div class="clock">
+            <span id="hrs">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+        </div>
+    </div>
+
+</div> 
+</center>
+
+<script>
+let hrs=document.getElementById("hrs");
+let min=document.getElementById("min");
+let sec=document.getElementById("sec");
+setInterval(()=>{
+    let currentTime=new Date();
+    hrs.innerHTML = currentTime.getHours()
+    min.innerHTML = currentTime.getMinutes()
+    sec.innerHTML = currentTime.getSeconds()
+},1000)   
+    
+
+ 
+</script>
+
+</body>
+</html>
